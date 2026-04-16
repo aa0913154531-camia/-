@@ -69,15 +69,15 @@ export default function Layout({ children, currentPage, onPageChange }: LayoutPr
             <div className="flex flex-col md:flex-row gap-12">
               <div className="space-y-2">
                 <span className="text-[10px] text-gold-primary uppercase tracking-widest block">Email</span>
-                <p className="text-sm text-text-main">aa0913154534@gmail.com</p>
+                <p className="text-sm text-text-main">camia-studio.vercel.app</p>
               </div>
               <div className="space-y-2">
                 <span className="text-[10px] text-gold-primary uppercase tracking-widest block">Address</span>
-                <p className="text-sm text-text-main">高雄市楠梓區後昌路120號</p>
+                <p className="text-sm text-text-main">高雄市</p>
               </div>
               <div className="space-y-2">
                 <span className="text-[10px] text-gold-primary uppercase tracking-widest block">Studio</span>
-                <p className="text-sm text-text-main">0913154531</p>
+                <p className="text-sm text-text-main">0800092000</p>
               </div>
             </div>
             
