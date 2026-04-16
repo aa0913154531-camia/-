@@ -40,7 +40,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] text-gold-primary uppercase tracking-[3px] block mb-2">Phone</span>
-                  <p className="text-text-main text-lg font-serif">0913154531</p>
+                  <p className="text-text-main text-lg font-serif">0800092000</p>
                 </div>
               </div>
 
@@ -50,7 +50,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] text-gold-primary uppercase tracking-[3px] block mb-2">Email</span>
-                  <p className="text-text-main text-lg font-serif">aa0913154534@gmail.com</p>
+                  <p className="text-text-main text-lg font-serif">camia-studio.vercel.app</p>
                 </div>
               </div>
 
@@ -60,7 +60,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] text-gold-primary uppercase tracking-[3px] block mb-2">Studio</span>
-                  <p className="text-text-main text-lg font-serif">高雄市楠梓區後昌路120號</p>
+                  <p className="text-text-main text-lg font-serif">高雄市</p>
                 </div>
               </div>
             </div>
