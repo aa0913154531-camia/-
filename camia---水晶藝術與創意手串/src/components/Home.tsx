@@ -29,7 +29,7 @@ export default function Home({ onExplore }: HomeProps) {
               transition={{ duration: 0.8 }}
             >
               <h1 className="font-serif text-7xl md:text-8xl font-bold leading-[1.1] mb-8 gold-text">
-                靈性美學<br />手工藝。
+                靈性美學<br />手工藝
               </h1>
               <p className="text-lg md:text-xl text-text-dim mb-10 leading-relaxed max-w-lg">
                 將自然界最純粹的能量，凝聚於腕間。專為您訂製的水晶擺件與創意手串，詮釋專業設計與極致工藝的完美結合。
