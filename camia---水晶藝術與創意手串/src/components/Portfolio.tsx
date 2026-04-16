@@ -26,7 +26,7 @@ export default function Portfolio() {
           <div className="max-w-2xl">
             <h1 className="font-serif text-6xl font-bold mb-6 gold-text tracking-tight">精選作品</h1>
             <p className="text-text-dim text-lg leading-relaxed italic font-serif">
-              "每一件作品都是大自然與藝術的對話，凝聚著時光的靈性。"
+              "每一件作品都是大自然與藝術的對話，凝聚著時光的靈性"
             </p>
           </div>
           <div className="w-48 h-[1px] bg-gold-dark" />
