@@ -29,10 +29,10 @@ export default function Home({ onExplore }: HomeProps) {
               transition={{ duration: 0.8 }}
             >
               <h1 className="font-serif text-7xl md:text-8xl font-bold leading-[1.1] mb-8 gold-text">
-                能量&靈性美學<br />手工藝
+                靈性美學<br />手工藝
               </h1>
               <p className="text-lg md:text-xl text-text-dim mb-10 leading-relaxed max-w-lg">
-                將自然界最純粹的能量，凝聚於腕間。專為您訂製的水晶擺件與創意手串，詮釋專業設計與極致工藝的完美結合。
+                將自然界最純粹的能量，凝聚於腕間。專為您訂製的水晶擺件與創意手串，詮釋專業設計與極致工藝的完美結合
               </p>
               <div className="flex gap-6">
                 <Button 
@@ -55,7 +55,7 @@ export default function Home({ onExplore }: HomeProps) {
             <div className="max-w-xl">
               <h2 className="font-serif text-4xl font-bold mb-6 text-gold-light tracking-tight">匠心獨運</h2>
               <p className="text-text-dim leading-relaxed">
-                我們精選世界各地優質原石，結合創意設計與精湛工藝，打造出兼具美感與能量的居家擺件與隨身飾品。
+                我們精選世界各地優質原石，結合創意設計與精湛工藝，打造出兼具美感與能量的居家擺件與隨身飾品
               </p>
             </div>
             <div className="w-32 h-[1px] bg-gold-dark" />
@@ -65,7 +65,7 @@ export default function Home({ onExplore }: HomeProps) {
             {[
               {
                 title: "璀璨蝴蝶 · 創意手串",
-                desc: "精選清透水晶與閃耀蝴蝶配飾，將自然能量凝聚於腕間。",
+                desc: "精選清透水晶與閃耀蝴蝶配飾，將自然能量凝聚於腕間",
                 img: "https://i.postimg.cc/Bn5NBs3h/LINE-ALBUM-2024817-260415-1-0.jpg"
               },
               {
@@ -75,7 +75,7 @@ export default function Home({ onExplore }: HomeProps) {
               },
               {
                 title: "紫水晶洞 · 鎮宅精品",
-                desc: "天然紫晶洞，福祿雙全，是大自然鬼斧神工的永恆珍藏。",
+                desc: "天然紫晶洞，福祿雙全，是大自然鬼斧神工的永恆珍藏",
                 img: "https://i.postimg.cc/3wK1L6Jv/LINE-ALBUM-shui-jing-bai-jian-260415-1-0.jpg"
               }
             ].map((item, i) => (
