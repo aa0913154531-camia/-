@@ -73,11 +73,11 @@ export default function Layout({ children, currentPage, onPageChange }: LayoutPr
               </div>
               <div className="space-y-2">
                 <span className="text-[10px] text-gold-primary uppercase tracking-widest block">Address</span>
-                <p className="text-sm text-text-main">高雄市</p>
+                <p className="text-sm text-text-main">高雄市楠梓區後昌路95號</p>
               </div>
               <div className="space-y-2">
                 <span className="text-[10px] text-gold-primary uppercase tracking-widest block">Studio</span>
-                <p className="text-sm text-text-main">0800092000</p>
+                <p className="text-sm text-text-main">0913154531</p>
               </div>
             </div>
             
