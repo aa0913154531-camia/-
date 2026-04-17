@@ -40,7 +40,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] text-gold-primary uppercase tracking-[3px] block mb-2">Phone</span>
-                  <p className="text-text-main text-lg font-serif">0800092000</p>
+                  <p className="text-text-main text-lg font-serif">0913154531</p>
                 </div>
               </div>
 
@@ -60,7 +60,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] text-gold-primary uppercase tracking-[3px] block mb-2">Studio</span>
-                  <p className="text-text-main text-lg font-serif">高雄市</p>
+                  <p className="text-text-main text-lg font-serif">高雄市楠梓區後昌路95號</p>
                 </div>
               </div>
             </div>
@@ -68,8 +68,8 @@ export default function Contact() {
             <div className="p-10 border border-gold-dark/30 bg-bg-surface/50 backdrop-blur-sm">
               <h4 className="font-serif text-xl font-bold mb-6 text-gold-light">營業時間</h4>
               <div className="space-y-3 text-sm text-text-dim uppercase tracking-widest">
-                <p className="flex justify-between"><span>週一至週五</span> <span>10:00 - 19:00</span></p>
-                <p className="flex justify-between"><span>週六</span> <span>11:00 - 17:00</span></p>
+                <p className="flex justify-between"><span>週一至週五</span> <span>12:00 - 22:00</span></p>
+                <p className="flex justify-between"><span>週六</span> <span>公休</span></p>
                 <p className="flex justify-between"><span>週日</span> <span>公休</span></p>
               </div>
             </div>
