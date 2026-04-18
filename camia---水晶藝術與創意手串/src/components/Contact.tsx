@@ -1,6 +1,6 @@
 import React from 'react';
 
-const socialLinks = [
+const socialLinks =[
   { name: 'LINE', url: 'https://lin.ee/7a9zKtJ', label: '立即諮詢' },
   { name: 'Instagram', url: 'https://www.instagram.com/camia7687687/', label: '追蹤作品' },
   { name: 'Threads', url: 'https://www.threads.net/@camia7687687/', label: '生活動態' }
