@@ -19,12 +19,14 @@ const portfolioItems = [
 ];
 
 export default function Portfolio() {
+  const fallbackImg = "https://i.postimg.cc/Bn5NBs3h/LINE-ALBUM-2024817-260415-1-0.jpg";
+
   return (
     <section className="py-32 bg-[#0a0a0a] relative overflow-hidden">
       <div className="container mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
           <div className="max-w-2xl">
-            <h2 className="font-serif text-6xl font-bold mb-6 text-[#D4AF37] tracking-tight">精選作品</h2>
+            <h2 className="font-serif text-6xl font-bold mb-6 text-[#D4AF37] tracking-tight">精選作品集</h2>
             <p className="text-xl text-[#D4AF37]/80 font-light leading-relaxed">
               每一件作品都是靈感與能量的結晶，為您尋找專屬的頻率。
             </p>
@@ -41,13 +43,16 @@ export default function Portfolio() {
               viewport={{ once: true }}
             >
               <Card className="bg-[#1a1a1a] border-[#D4AF37]/20 overflow-hidden hover:border-[#D4AF37]/50 transition-all group">
-                <div className="aspect-[4/5] overflow-hidden">
+                <div className="aspect-[4/5] overflow-hidden bg-[#222]">
                   <img
                     src={item.img}
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = "https://i.postimg.cc/TPRDkSY1/LINE-ALBUM-2024817-260415-6-0.jpg"; // 如果圖片掛掉，顯示一張預設的美圖
+                      const target = e.target as HTMLImageElement;
+                      if (target.src !== fallbackImg) {
+                        target.src = fallbackImg;
+                      }
                     }}
                   />
                 </div>
