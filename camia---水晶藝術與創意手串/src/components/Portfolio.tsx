@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'motion/react';
+import { Instagram, MessageCircle } from 'lucide-react';
 
 const portfolioItems = [
   { id: 1, title: "璀璨蝴蝶手串", desc: "精選清透水晶與閃耀蝴蝶配飾，展現靈動之美", img: "https://i.postimg.cc/Bn5NBs3h/LINE-ALBUM-2024817-260415-1-0.jpg", link: "https://lin.ee/7a9zKtJ" },
@@ -28,6 +29,15 @@ export default function Portfolio() {
             <p className="text-xl text-[#D4AF37]/80 font-light leading-relaxed">
               每一件作品都是靈感與能量的結晶，為您尋找專屬的頻率。
             </p>
+          </div>
+          {/* 社群圖示 */}
+          <div className="flex gap-6 mb-2">
+            <a href="https://www.instagram.com/camia7687687/" target="_blank" className="text-[#D4AF37] hover:text-white transition-colors">
+              <Instagram size={32} />
+            </a>
+            <a href="https://www.threads.net/@camia7687687" target="_blank" className="text-[#D4AF37] hover:text-white transition-colors flex items-center font-bold">
+               Threads
+            </a>
           </div>
         </div>
 
