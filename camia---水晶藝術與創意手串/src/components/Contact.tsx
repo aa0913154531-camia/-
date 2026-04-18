@@ -26,7 +26,7 @@ export default function Contact() {
             </a>
           ))}
         </div>
-        <p className="opacity-30 text-xs tracking-widest">© 2026 CAMIA 精品手作</p>
+        <p className="opacity-30 text-xs tracking-widest text-center">© 2026 CAMIA ALL RIGHTS RESERVED.</p>
       </div>
     </section>
   );
