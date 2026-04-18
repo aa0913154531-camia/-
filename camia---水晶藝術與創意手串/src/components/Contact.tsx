@@ -1,119 +1,81 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Mail, MessageCircle, Instagram, AtSign } from 'lucide-react';
+
+const socialLinks = [
+  {
+    name: 'LINE 官方帳號',
+    icon: <MessageCircle className="w-12 h-12" />,
+    url: 'https://lin.ee/7a9zKtJ',
+    color: '#06C755',
+    label: '立即諮詢'
+  },
+  {
+    name: 'Instagram',
+    icon: <Instagram className="w-12 h-12" />,
+    url: 'https://www.instagram.com/camia7687687/',
+    color: '#E1306C',
+    label: '追蹤作品'
+  },
+  {
+    name: 'Threads',
+    icon: <AtSign className="w-12 h-12" />,
+    url: 'https://www.threads.net/@camia7687687/',
+    color: '#ffffff',
+    label: '生活動態'
+  }
+];
 
 export default function Contact() {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("感謝您的留言！我們將儘快與您聯繫。");
-  };
-
   return (
-    <div className="py-32 bg-bg-deep relative overflow-hidden">
-      <div className="container mx-auto px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
-          <div className="max-w-2xl">
-            <h1 className="font-serif text-6xl font-bold mb-6 gold-text tracking-tight">聯絡我們</h1>
-            <p className="text-text-dim text-lg leading-relaxed">
-              如果您對我們的作品有任何疑問，或需要客製化設計服務，歡迎隨時聯繫。
-            </p>
+    <section className="py-32 bg-[#050505] relative overflow-hidden" id="contact">
+      <div className="container mx-auto px-8 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="font-serif text-5xl md:text-6xl font-bold mb-8 text-[#D4AF37]"
+          >
+            與我們連繫
+          </motion.h2>
+          <p className="text-[#D4AF37]/80 text-xl mb-16 font-light">
+            無論是尋找命定水晶，或是想客製專屬能量，歡迎透過社群平台與我聊聊。
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {socialLinks.map((link, index) => (
+              <motion.a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ scale: 1.1 }}
+                className="flex flex-col items-center p-8 border border-[#D4AF37]/20 bg-[#1a1a1a]/50 backdrop-blur-sm hover:border-[#D4AF37]/60 transition-all group"
+              >
+                <div style={{ color: link.color }} className="mb-6 transition-transform group-hover:rotate-12">
+                  {link.icon}
+                </div>
+                <h3 className="text-[#D4AF37] text-2xl font-bold mb-2">{link.name}</h3>
+                <span className="text-[#D4AF37]/60 font-light">{link.label}</span>
+              </motion.a>
+            ))}
           </div>
-          <div className="w-48 h-[1px] bg-gold-dark" />
-        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-16"
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="mt-24 pt-12 border-t border-[#D4AF37]/10"
           >
-            <div className="space-y-12">
-              <div className="flex items-start gap-8">
-                <div className="w-14 h-14 rounded-full border border-gold-dark flex items-center justify-center text-gold-primary shrink-0 shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-                  <Phone className="w-6 h-6" />
-                </div>
-                <div>
-                  <span className="text-[10px] text-gold-primary uppercase tracking-[3px] block mb-2">Phone</span>
-                  <p className="text-text-main text-lg font-serif">0913154531</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-8">
-                <div className="w-14 h-14 rounded-full border border-gold-dark flex items-center justify-center text-gold-primary shrink-0 shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-                  <Mail className="w-6 h-6" />
-                </div>
-                <div>
-                  <span className="text-[10px] text-gold-primary uppercase tracking-[3px] block mb-2">Email</span>
-                  <p className="text-text-main text-lg font-serif">camia-studio.vercel.app</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-8">
-                <div className="w-14 h-14 rounded-full border border-gold-dark flex items-center justify-center text-gold-primary shrink-0 shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <div>
-                  <span className="text-[10px] text-gold-primary uppercase tracking-[3px] block mb-2">Studio</span>
-                  <p className="text-text-main text-lg font-serif">高雄市楠梓區後昌路95號</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-10 border border-gold-dark/30 bg-bg-surface/50 backdrop-blur-sm">
-              <h4 className="font-serif text-xl font-bold mb-6 text-gold-light">營業時間</h4>
-              <div className="space-y-3 text-sm text-text-dim uppercase tracking-widest">
-                <p className="flex justify-between"><span>週一至週五</span> <span>12:00 - 22:00</span></p>
-                <p className="flex justify-between"><span>週六</span> <span>公休</span></p>
-                <p className="flex justify-between"><span>週日</span> <span>公休</span></p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="immersive-card p-12">
-              <div className="mb-10">
-                <h2 className="font-serif text-3xl font-bold mb-2 text-gold-light tracking-tight">發送訊息</h2>
-                <p className="text-text-dim text-sm uppercase tracking-widest">我們會儘快回覆您的需求。</p>
-              </div>
-              
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-3">
-                    <label className="text-[10px] text-gold-primary uppercase tracking-[2px]">姓名</label>
-                    <Input placeholder="您的姓名" required className="bg-transparent border-b border-gold-dark/50 border-t-0 border-l-0 border-r-0 rounded-none px-0 focus:border-gold-primary transition-all placeholder:text-text-dim/30" />
-                  </div>
-                  <div className="space-y-3">
-                    <label className="text-[10px] text-gold-primary uppercase tracking-[2px]">電子郵件</label>
-                    <Input type="email" placeholder="your@email.com" required className="bg-transparent border-b border-gold-dark/50 border-t-0 border-l-0 border-r-0 rounded-none px-0 focus:border-gold-primary transition-all placeholder:text-text-dim/30" />
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <label className="text-[10px] text-gold-primary uppercase tracking-[2px]">主旨</label>
-                  <Input placeholder="您感興趣的作品或服務" className="bg-transparent border-b border-gold-dark/50 border-t-0 border-l-0 border-r-0 rounded-none px-0 focus:border-gold-primary transition-all placeholder:text-text-dim/30" />
-                </div>
-                <div className="space-y-3">
-                  <label className="text-[10px] text-gold-primary uppercase tracking-[2px]">訊息內容</label>
-                  <Textarea placeholder="請輸入您的訊息..." className="bg-transparent border border-gold-dark/50 rounded-none p-4 min-h-[150px] focus:border-gold-primary transition-all placeholder:text-text-dim/30" required />
-                </div>
-                <Button type="submit" className="w-full bg-transparent border border-gold-primary text-gold-primary py-8 rounded-none text-sm tracking-[3px] uppercase hover:bg-gold-primary hover:text-black transition-all duration-300">
-                  送出訊息
-                </Button>
-              </form>
-            </div>
+            <p className="text-[#D4AF37]/40 text-sm tracking-widest uppercase">
+              © 2026 CAMIA 精品手作 - 水晶藝術與創意手串
+            </p>
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
