@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Mail, MessageCircle, Instagram, AtSign } from 'lucide-react';
+import { MessageCircle, Instagram, AtSign } from 'lucide-react';
 
 const socialLinks = [
   {
@@ -42,7 +42,7 @@ export default function Contact() {
             無論是尋找命定水晶，或是想客製專屬能量，歡迎透過社群平台與我聊聊。
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-white">
             {socialLinks.map((link, index) => (
               <motion.a
                 key={link.name}
@@ -52,7 +52,7 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
                 className="flex flex-col items-center p-8 border border-[#D4AF37]/20 bg-[#1a1a1a]/50 backdrop-blur-sm hover:border-[#D4AF37]/60 transition-all group"
               >
                 <div style={{ color: link.color }} className="mb-6 transition-transform group-hover:rotate-12">
@@ -70,7 +70,7 @@ export default function Contact() {
             transition={{ delay: 0.5 }}
             className="mt-24 pt-12 border-t border-[#D4AF37]/10"
           >
-            <p className="text-[#D4AF37]/40 text-sm tracking-widest uppercase">
+            <p className="text-[#D4AF37]/40 text-sm tracking-widest uppercase text-center">
               © 2026 CAMIA 精品手作 - 水晶藝術與創意手串
             </p>
           </motion.div>
